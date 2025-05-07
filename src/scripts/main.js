@@ -64,8 +64,12 @@ const thirdPromise = new Promise((resolve) => {
 
     if (leftClicked && rightClicked) {
       resolve('Third promise was resolved');
+
       document.removeEventListener('click', handler);
       document.removeEventListener('contextmenu', handler);
+
+      leftClicked = false;
+      rightClicked = false;
     }
   };
 
